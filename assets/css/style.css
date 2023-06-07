@@ -1276,6 +1276,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #ff6a28;
 }
 
+.cart_link > button a:hover {
+  color: #ff6a28;
+}
+
 .cart_link {
   margin-left: 25px;
   position: relative;
@@ -1300,8 +1304,47 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   border-radius: 30px;
   display: block;
 }
+.cart_link > button {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #747474;
+  border: 1px solid #ddd;
+  padding: 10px 17px 8px;
+  border-radius: 30px;
+  display: block;
+  animation: wiggle 2s linear infinite;
+  border-top: 3px solid orange;
+}
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .cart_link > a {
+    padding: 6px 8px;
+  }
+  .cart_link > button {
     padding: 6px 8px;
   }
 }
@@ -1309,13 +1352,24 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   .cart_link > a {
     padding: 6px 13px;
   }
+  .cart_link > button {
+    padding: 6px 13px;
+  }
 }
 .cart_link > a i {
   font-size: 17px;
   margin-right: 8px;
 }
+.cart_link > button i {
+  font-size: 17px;
+  margin-right: 8px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .cart_link > a i {
+    font-size: 14px;
+    margin-right: 4px;
+  }
+  .cart_link > button i {
     font-size: 14px;
     margin-right: 4px;
   }
